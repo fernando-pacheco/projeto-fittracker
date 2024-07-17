@@ -6,10 +6,12 @@ import { Groups } from "./pages/groups";
 import { Templates } from "./pages/templates";
 import { Calendar } from "./pages/calendar";
 import { Chats } from "./pages/chats";
+import { Perfil } from "./pages/perfil";
+import { Settings } from "./pages/settings";
 
 export function App() {
   return (
-    <div className="flex flex-col flex-1 space-y-5">
+    <div className="flex flex-col flex-1 space-y-5 mt-2.5">
       <Header />
       <Routes>
         <Route path="/dashboard" element={<Dashboard />} />
@@ -18,6 +20,8 @@ export function App() {
         <Route path="/templates" element={<Templates />} />
         <Route path="/calendar" element={<Calendar />} />
         <Route path="/chats" element={<Chats />} />
+        <Route path="/perfil" element={<Perfil />} />
+        <Route path="/settings" element={<Settings />} />
       </Routes>
     </div>
   );
