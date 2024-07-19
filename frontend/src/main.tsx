@@ -8,7 +8,7 @@ import { SideBar } from './components/sidebar';
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <BrowserRouter>
-      <div className='flex h-screen px-10 py-6'>
+      <div className='flex h-screen p-4'>
         <SideBar />
         <App />
       </div>

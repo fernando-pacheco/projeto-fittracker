@@ -1,27 +1,19 @@
 import { Routes, Route } from "react-router-dom";
-import { Dashboard } from "./pages/dashboard";
 import { Programs } from "./pages/programs";
-import { Header } from "./components/header";
-import { Groups } from "./pages/groups";
-import { Templates } from "./pages/templates";
-import { Calendar } from "./pages/calendar";
-import { Chats } from "./pages/chats";
 import { Perfil } from "./pages/perfil";
-import { Settings } from "./pages/settings";
+import { UserSettings } from "./pages/user-settings";
+import { Home } from "./pages/home";
+import { Dashboard } from "./pages/dashboard";
 
 export function App() {
   return (
-    <div className="flex flex-col flex-1 space-y-5 mt-2.5">
-      <Header />
+    <div className="flex-1">
       <Routes>
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/programs" element={<Programs />} />
-        <Route path="/groups" element={<Groups />} />
-        <Route path="/templates" element={<Templates />} />
-        <Route path="/calendar" element={<Calendar />} />
-        <Route path="/chats" element={<Chats />} />
         <Route path="/perfil" element={<Perfil />} />
-        <Route path="/settings" element={<Settings />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/user-settings" element={<UserSettings />} />
       </Routes>
     </div>
   );
