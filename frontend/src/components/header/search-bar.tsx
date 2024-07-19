@@ -2,15 +2,14 @@ import { Search } from "lucide-react";
 
 export function SearchBar() {
     return (
-        <form className="w-[500px] flex gap-2 rounded-full bg-zinc-800 items-center px-4 py-1">
+        <form className="group flex items-center rounded-xl bg-zinc-800 px-4 py-1 transition-all duration-300">
             <input
-                // disabled={true}
                 placeholder="Pesquisa"
-                className="w-full bg-transparent outline-none"
-                />
+                className="w-0 bg-transparent outline-none transition-all duration-300 group-hover:w-52"
+            />
             <button type="submit">
-                <Search className="size-5 text-yellow-300" />
+                <Search className="size-5 text-amber-600" />
             </button>
         </form>
-    )
+    );
 }

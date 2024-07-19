@@ -3,7 +3,7 @@ import { SearchBar } from "./header/search-bar";
 
 export function Header() {
     return (
-        <div className="flex justify-between items-center">
+        <div className="flex gap-8 items-center">
             <SearchBar />
             <IconsPerfil />
         </div>

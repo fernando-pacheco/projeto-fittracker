@@ -1,11 +1,9 @@
-import { Bell, BellPlus, CircleUserRound, Mail, MailPlus } from "lucide-react";
+import { Bell, BellPlus, Mail, MailPlus } from "lucide-react";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 
 export function IconsPerfil() {
     const [notifications, setNotifications] = useState(false)
     const [emails, setEmails] = useState(false)
-    const navigate = useNavigate()
 
     function toggleNotification() {
         setNotifications(!notifications)
@@ -16,27 +14,21 @@ export function IconsPerfil() {
     }
 
     return (
-        <div className="flex gap-8 items-center">
+        <div className="flex gap-8 items-center h-full w-full">
             <button onClick={toggleNotification}>
                 {notifications ? (
-                    <BellPlus className="text-yellow-300" />
+                    <BellPlus className="text-amber-600 bg-zinc-800 rounded-lg" />
                 ) : (
-                    <Bell />
+                    <Bell className="text-zinc-200 rounded-lg bg-zinc-800" />
                 )}
             </button>
             <button onClick={toggleEmails}>
                 {emails ? (
-                    <MailPlus className="text-yellow-300" />
+                    <MailPlus className="size-5 rounded-lg text-amber-600 bg-zinc-800" />
                 ) : (
-                    <Mail />
+                    <Mail className="text-zinc-200 size-5 rounded-lg bg-zinc-800" />
                 )}
             </button>
-            <div>
-                <button onClick={() => navigate('/perfil')} className="flex gap-2 items-center">
-                    Nome Sobrenome
-                    <CircleUserRound />
-                </button>
-            </div>
         </div>
     )
 }

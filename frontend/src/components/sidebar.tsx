@@ -1,7 +1,8 @@
-import { AreaChart, CalendarRange, Dumbbell, LayoutPanelTop, LogOut, MessageSquareCode, Settings, Users } from 'lucide-react';
+import { BarChart2, House, LayoutGrid, User, UserCog } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-import favicon from '../assets/favicon-logo-sf.png';
+import favicon from '../../public/favicon-logo-sf.png';
 import { NavButton } from './sidebar/nav-button';
+import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
 
 export function SideBar() {
     const navigate = useNavigate();
@@ -11,26 +12,22 @@ export function SideBar() {
     }
 
     return (
-        <div className="w-72 flex flex-col justify-between">
-            <div className="space-y-5">
-                <button onClick={() => handleNavigation('/dashboard')} className="flex gap-2 items-center">
-                    <img src={favicon} alt="favicon-logo" className="w-[36px] h-[48px]" />
-                    <p className="text-yellow-300 font-bold text-2xl">
-                        FIT-TRACK.ER
-                    </p>
+        <div className="w-20 flex flex-col bg-zinc-800 rounded-3xl py-6">
+            <div className="flex justify-between flex-col flex-1 items-center">
+                <button onClick={() => handleNavigation('/home')} className="flex gap-2 items-center">
+                    <img src={favicon} alt="favicon-logo" className="w-[50px] h-[62px]" />
                 </button>
-                <nav className="space-y-2">
-                    <NavButton path="/dashboard" icon={<AreaChart className="size-5" />} label="Dashboard" />
-                    <NavButton path="/programs" icon={<Dumbbell className="size-5" />} label="Programas" />
-                    <NavButton path="/groups" icon={<Users className="size-5" />} label="Grupos" />
-                    <NavButton path="/templates" icon={<LayoutPanelTop className="size-5" />} label="Modelos" />
-                    <NavButton path="/calendar" icon={<CalendarRange className="size-5" />} label="Calendário" />
-                    <NavButton path="/chats" icon={<MessageSquareCode className="size-5" />} label="Chats" />
+                <nav className="space-y-6 items-center w-full">
+                    <NavButton path="/home" icon={<House />} />
+                    <NavButton path="/programs" icon={<LayoutGrid />} />
+                    <NavButton path="/perfil" icon={<User />} />
+                    <NavButton path="/dashboard" icon={<BarChart2 />} />
+                    <NavButton path="/user-settings" icon={<UserCog />} />
                 </nav>
-            </div>
-            <div className="flex flex-col space-y-2">
-                <NavButton path="/settings" icon={<Settings className="size-5" />} label="Configurações" />
-                <NavButton path="/logout" variant="secondary" icon={<LogOut className="size-5" />} label="Sair" />
+                <Avatar>
+                    <AvatarImage className='w-10 h-10' src="https://github.com/shadcn.png" alt="@avatar" />
+                    <AvatarFallback>CN</AvatarFallback>
+                </Avatar>
             </div>
         </div>
     );

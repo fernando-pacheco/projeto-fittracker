@@ -3,5 +3,5 @@ export function Dashboard() {
         <div className="">
             Dashboard
         </div>
-    );
+    )
 }
