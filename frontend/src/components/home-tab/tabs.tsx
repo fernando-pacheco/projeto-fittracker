@@ -8,8 +8,8 @@ export function HomeTabs() {
     const [selectedValue, setSelectedValue] = useState("summary");
 
     const selectTabStyle = (value: string) => (
-        `px-4 pb-6 rounded border-4 text-zinc-500 hover:text-zinc-100 ${selectedValue === value ?
-            'border-zinc-900 text-zinc-100 border-b-amber-600 shadow-bottom-inner' :
+        `px-4 pb-6 rounded border-4 hover:text-zinc-100 text-zinc-500 ${selectedValue === value ?
+            'text-neutral-100 border-zinc-900 border-b-amber-600 shadow-bottom-inner' :
             'border-transparent'}`
     );
 
