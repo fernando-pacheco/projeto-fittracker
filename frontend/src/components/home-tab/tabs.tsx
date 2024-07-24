@@ -3,13 +3,14 @@ import { Root, List, Trigger, Content } from "@radix-ui/react-tabs";
 import { Separator } from "../ui/separator";
 import { Header } from "../header";
 import { Summary } from './tab/summary';
+import { Programs } from './tab/programs';
 
 export function HomeTabs() {
     const [selectedValue, setSelectedValue] = useState("summary");
 
     const selectTabStyle = (value: string) => (
         `px-4 pb-6 rounded border-4 hover:text-zinc-100 text-zinc-500 ${selectedValue === value ?
-            'text-neutral-100 border-zinc-900 border-b-amber-600 shadow-bottom-inner' :
+            'text-zinc-100 border-zinc-900 border-b-amber-600 shadow-bottom-inner' :
             'border-transparent'}`
     );
 
@@ -41,16 +42,16 @@ export function HomeTabs() {
                         Nutrição
                     </Trigger>
                     <Trigger
-                        value="ai-coach"
-                        className={selectTabStyle('ai-coach')}
-                    >
-                        AI Coach
-                    </Trigger>
-                    <Trigger
                         value="metrics"
                         className={selectTabStyle('metrics')}
                     >
                         Medidas
+                    </Trigger>
+                    <Trigger
+                        value="ai-coach"
+                        className={selectTabStyle('ai-coach')}
+                    >
+                        AI Coach
                     </Trigger>
                 </div>
                 <div>
@@ -66,17 +67,17 @@ export function HomeTabs() {
                 </Content>
 
                 <Content value="programs" className="flex-1 h-full">
-                    Programas de treino
+                    <Programs />
                 </Content>
 
                 <Content value="nutrition" className="flex-1 h-full">
                     Nutrição
                 </Content>
-                <Content value="ai-coach" className="flex-1 h-full">
-                    AI Coach
-                </Content>
                 <Content value="metrics" className="flex-1 h-full">
                     Medidas
+                </Content>
+                <Content value="ai-coach" className="flex-1 h-full">
+                    AI Coach
                 </Content>
             </div>
         </Root>
