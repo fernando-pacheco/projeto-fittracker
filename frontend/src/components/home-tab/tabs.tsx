@@ -10,7 +10,7 @@ export function HomeTabs() {
 
     const selectTabStyle = (value: string) => (
         `px-4 pb-6 rounded border-4 hover:text-zinc-100 text-zinc-500 ${selectedValue === value ?
-            'text-zinc-100 border-zinc-900 border-b-amber-600 shadow-bottom-inner' :
+            'text-neutral-100 border-zinc-900 border-b-amber-600 shadow-bottom-inner' :
             'border-transparent'}`
     );
 
@@ -21,8 +21,8 @@ export function HomeTabs() {
             onValueChange={setSelectedValue}
             defaultValue="summary"
         >
-            <List className="flex justify-between ml-10 mt-5">
-                <div className="flex space-x-20">
+            <List className="flex justify-between ml-2 mt-5">
+                <div className="flex space-x-16">
                     <Trigger
                         value="summary"
                         className={selectTabStyle('summary')}
@@ -59,9 +59,9 @@ export function HomeTabs() {
                 </div>
             </List>
 
-            <Separator className="bg-zinc-800 size-0.5 w-full" />
+            <Separator className="bg-zinc-800 size-[3px] w-full" />
 
-            <div className="flex-1 flex flex-col pt-4 pl-4 h-full">
+            <div className="flex-1 flex flex-col pt-4 h-full">
                 <Content value="summary" className="flex-1 h-full">
                     <Summary />
                 </Content>
