@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { Root, List, Trigger, Content } from "@radix-ui/react-tabs";
-import { Separator } from "../ui/separator";
-import { Header } from "../header";
-import { Summary } from './tab/summary';
-import { Programs } from './tab/programs';
+import { Separator } from "./ui/separator";
+import { Header } from "./header";
+import { Summary } from './home-tab/summary';
+import { Programs } from './home-tab/programs';
 
 export function HomeTabs() {
     const [selectedValue, setSelectedValue] = useState("summary");
@@ -59,7 +59,7 @@ export function HomeTabs() {
                 </div>
             </List>
 
-            <Separator className="bg-zinc-800 size-[3px] w-full" />
+            <Separator className="bg-zinc-800 size-[3px] w-[105%] -ml-4" />
 
             <div className="flex-1 flex flex-col pt-4 h-full">
                 <Content value="summary" className="flex-1 h-full">

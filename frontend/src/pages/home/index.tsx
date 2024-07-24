@@ -1,5 +1,5 @@
-import { HomeTabs } from "@/components/home-tab/tabs";
-import { CarouselPlugin } from "./carousel";
+import { HomeTabs } from "@/components/tabs";
+import { CarouselPlugin } from "../../components/carousel";
 
 
 export function Home() {
