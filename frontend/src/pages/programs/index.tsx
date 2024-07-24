@@ -1,4 +1,4 @@
-import { KanbanBoard } from "@/components/dragger/kanban-board";
+import { KanbanBoard } from "@/components/kanban-board";
 
 export function Programs() {
     return (
