@@ -7,7 +7,7 @@ import { Dashboard } from "./pages/dashboard";
 
 export function App() {
   return (
-    <div className="flex-1">
+    <div className="flex-1 h-full">
       <Routes>
         <Route path="/home" element={<Home />} />
         <Route path="/programs" element={<Programs />} />
