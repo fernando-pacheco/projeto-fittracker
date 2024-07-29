@@ -4,6 +4,8 @@ import { Perfil } from "./pages/perfil";
 import { UserSettings } from "./pages/user-settings";
 import { Home } from "./pages/home";
 import { Dashboard } from "./pages/dashboard";
+import { Login } from "./pages/login";
+import { Register } from "./pages/register";
 
 export function App() {
   return (
@@ -14,6 +16,8 @@ export function App() {
         <Route path="/perfil" element={<Perfil />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/user-settings" element={<UserSettings />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
     </div>
   );
