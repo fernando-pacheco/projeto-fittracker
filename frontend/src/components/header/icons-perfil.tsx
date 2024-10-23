@@ -17,16 +17,16 @@ export function IconsPerfil() {
         <div className="flex gap-8 items-center h-full w-full">
             <button onClick={toggleNotification}>
                 {notifications ? (
-                    <BellPlus className="text-amber-600 bg-zinc-800 rounded-lg" />
+                    <BellPlus className="text-amber-600 bg-zinc-800 rounded-md" />
                 ) : (
-                    <Bell className="text-zinc-200 rounded-lg bg-zinc-800" />
+                    <Bell className="text-zinc-200 rounded-md bg-zinc-800" />
                 )}
             </button>
             <button onClick={toggleEmails}>
                 {emails ? (
-                    <MailPlus className="size-5 rounded-lg text-amber-600 bg-zinc-800" />
+                    <MailPlus className="size-5 rounded-md text-amber-600 bg-zinc-800" />
                 ) : (
-                    <Mail className="text-zinc-200 size-5 rounded-lg bg-zinc-800" />
+                    <Mail className="text-zinc-200 size-5 rounded-md bg-zinc-800" />
                 )}
             </button>
         </div>

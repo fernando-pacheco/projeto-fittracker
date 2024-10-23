@@ -19,6 +19,7 @@ interface ModalRegisterProps {
     onSubmit: (event: FormEvent<HTMLFormElement>) => void;
     isOpen: boolean;
     onOpenChange: (open: boolean) => void;
+    key: string
 }
 
 export function ModalRegister({
@@ -29,11 +30,12 @@ export function ModalRegister({
     onSubmit,
     isOpen,
     onOpenChange,
+    key,
 }: ModalRegisterProps) {
     return (
-        <Dialog open={isOpen} onOpenChange={onOpenChange}>
+        <Dialog key={key} open={isOpen} onOpenChange={onOpenChange}>
             <DialogTrigger asChild>
-                <Button className='flex bg-zinc-800 gap-2 items-center p-2 border rounded-lg hover:bg-amber-600'>
+                <Button className='flex bg-zinc-800 gap-2 items-center p-2 border rounded-md hover:bg-amber-600'>
                     <CirclePlus className='size-5' />
                     {buttonTitle}
                 </Button>

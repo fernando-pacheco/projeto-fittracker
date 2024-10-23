@@ -90,3 +90,26 @@ html, body, #root {
     height: 100%;
     margin: 0;
 }
+
+/* styles/globals.css */
+.scrollbar-custom::-webkit-scrollbar {
+    width: 6px; /* Largura da scrollbar */
+  }
+  
+.scrollbar-custom::-webkit-scrollbar-track {
+background: transparent; /* Cor do track */
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb {
+background: #d97706; /* Cor do thumb */
+border-radius: 9999px; /* Arredondar o thumb */
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb:hover {
+background: #b46509; /* Cor do thumb no hover */
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb:active {
+background: #b46509; /* Cor do thumb no active */
+}
+  

@@ -8,7 +8,7 @@ import {
     DialogTitle,
     DialogTrigger,
 } from "@/components/ui/dialog";
-import { Ellipsis, Save, Trash2 } from "lucide-react";
+import { Save, Trash2 } from "lucide-react";
 import { FormEvent, ReactNode } from "react";
 
 interface ModalUpdateProps {
@@ -19,6 +19,7 @@ interface ModalUpdateProps {
     onDelete: (event: React.MouseEvent<HTMLButtonElement>) => void
     isOpen: boolean
     onOpenChange: (open: boolean) => void
+    icon: ReactNode
 }
 
 export function ModalUpdate({
@@ -29,12 +30,13 @@ export function ModalUpdate({
     isOpen,
     onDelete,
     onOpenChange,
+    icon,
 }: ModalUpdateProps) {
     return (
         <Dialog open={isOpen} onOpenChange={onOpenChange}>
             <DialogTrigger asChild>
                 <button className='bg-zinc-800 rounded-md p-1 hover:bg-amber-600'>
-                    <Ellipsis className="size-5"/>
+                    {icon}
                 </button>
             </DialogTrigger>
             <DialogContent className="sm:max-w-[625px] bg-zinc-800 border-amber-600">
